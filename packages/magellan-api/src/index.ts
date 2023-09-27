@@ -5,9 +5,6 @@ import { createContext } from './createContext'
 import { resolvers } from './resolvers'
 import express from 'express'
 
-process.env.AWS_PROFILE = '301838289846_AdministratorAccess'
-process.env.AWS_REGION = 'ap-south-1'
-
 const server = new ApolloServer({
   typeDefs: loadSchema(),
   resolvers,
