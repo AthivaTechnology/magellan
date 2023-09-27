@@ -6,7 +6,7 @@ import './index.scss'
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
 
 const client = new ApolloClient({
-  uri: 'http://magellanapi-lb-v3-909345357.ap-south-1.elb.amazonaws.com:4000',
+  uri: 'https://5gb88he8ex.us-east-1.awsapprunner.com/',
   cache: new InMemoryCache()
 })
 
