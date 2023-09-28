@@ -41,7 +41,15 @@ export function DatabaseTableDetails(props: { table: GqlTable }) {
       </Breadcrumbs>
 
       <h1>{table.name} table</h1>
-      <p>{table.description}</p>
+      <p>
+        {table.description && table.description.startsWith('https://') ? (
+          <Link href={table.description} target="_blank" rel="noopener noreferrer">
+            {table.description}
+          </Link>
+        ) : (
+          table.description
+        )}
+      </p>
 
       <h2>Metadata</h2>
       <TableContainer component={Paper}>
